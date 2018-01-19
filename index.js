@@ -44,6 +44,8 @@ class Delivery {
   }
   customer() {return store.customers.filter(customer => {return customer.id == this.customerId})[0]
   }
+  meal() {return store.meals.filter(meal => {return meal.id == this.mealId})[0]
+}
 }
 
 class Employer {
