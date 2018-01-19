@@ -22,7 +22,7 @@ class Meal {
 }
   static byPrice() {
     const priceSorter = function (meal1, meal2) {
-    return meal1.price - meal2.price;};
+    return meal2.price - meal1.price;};
     return store.meals.sort(priceSorter)
   }
 }
