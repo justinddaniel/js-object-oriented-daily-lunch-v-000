@@ -42,7 +42,7 @@ class Delivery {
     if (customer) {this.customerId = customer.id}
     store.deliveries.push(this)
   }
-  customer() {return store.customers.filter(customer => {return customer.deliveryId == this.id})
+  customer() {return store.customers.filter(customer => {return customer.deliveryId == this.id}[0])
   }
 }
 
