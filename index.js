@@ -20,7 +20,7 @@ class Meal {
   this.price = price
   store.meals.push(this)
 }
-  byPrice() {
+  static byPrice() {
     const priceSorter = function (meal1, meal2) {
     return meal1.price - meal2.price;};
     return store.meals.sort(priceSorter)
