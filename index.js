@@ -18,6 +18,7 @@ class Meal {
   this.id = mealId++
   this.title = title
   this.price = price
+  store.meals.push(this)
 }
 }
 
@@ -26,6 +27,7 @@ class Delivery {
     this.id = deliveryId++
     this.mealId = meal.id
     this.customerId = customer.id
+    store.deliveries.push(this)
   }
 }
 
@@ -33,5 +35,6 @@ class Employer {
   constructor(name) {
     this.id = employerId++
     this.name = name
+    store.employers.push(this)
   }
 }
