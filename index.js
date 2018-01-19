@@ -14,9 +14,9 @@ class Customer {
 
   totalSpent() {
     let totalprice = 0
-    let custmeals = store.meals.filter(meal => {
-      return meal.customerId == this.id
-    })
+    let custdel = store.deliveries.filter(delivery => {
+      return delivery.customerId == this.id})
+    let custmeals = custdel.
     custmeals.forEach(function (element) {totalprice += element.price})
     return totalprice
   }
@@ -39,7 +39,7 @@ class Meal {
 class Delivery {
   constructor(meal, customer) {
     this.id = deliveryId++
-    if (meal) {this.mealId = meal.id}
+    if (meal) {this.mealId = meal.id; this.meal = meal}
     if (customer) {this.customerId = customer.id}
     store.deliveries.push(this)
   }
