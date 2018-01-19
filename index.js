@@ -11,6 +11,8 @@ class Customer {
     if (employer) {this.employerId = employer.id}
     store.customers.push(this)
   }
+
+  totalSpent() {}
 }
 
 class Meal {
