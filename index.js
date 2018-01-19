@@ -1,3 +1,4 @@
+let store = {customers: [], meals: [], deliveries: [], employers: []}
 let customerId = 0
 let mealId = 0
 let deliveryId = 0
