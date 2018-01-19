@@ -20,6 +20,12 @@ class Meal {
   this.price = price
   store.meals.push(this)
 }
+  static.byPrice() {
+    const priceSorter = function (meal1, meal2) {
+  return meal1.price - meal2.price;
+};
+    store.meals.order()
+  }
 }
 
 class Delivery {
