@@ -1,5 +1,6 @@
 let customerId = 0
 let mealId = 0
+let deliveryId = 0
 
 class Customer {
   constructor(name, employer) {
@@ -15,4 +16,10 @@ class Meal {
   this.title = title
   this.price = price
 }
+}
+
+class Delivery {
+  constructor(meal, customer) {
+    this.id = deliveryId++
+  }
 }
