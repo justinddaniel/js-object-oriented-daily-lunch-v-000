@@ -12,7 +12,14 @@ class Customer {
     store.customers.push(this)
   }
 
-  totalSpent() {}
+  totalSpent() {
+    let totalprice = 0
+    let custmeals = store.meals.filter(meal => {
+      return meal.customerId == this.id
+    })
+    custmeals.forEach(function (element) {totalprice += element.price})
+    return totalprice
+  }
 }
 
 class Meal {
