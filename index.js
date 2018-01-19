@@ -16,8 +16,7 @@ class Customer {
     let totalprice = 0
     let custdel = store.deliveries.filter(delivery => {
       return delivery.customerId == this.id})
-    let custmeals = custdel.
-    custmeals.forEach(function (element) {totalprice += element.price})
+    custdel.forEach(function (element) {totalprice += element.meal.price})  
     return totalprice
   }
 }
